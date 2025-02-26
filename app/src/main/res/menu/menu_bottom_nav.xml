@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/fragment_home"
+        android:title="홈"
+        android:icon="@drawable/baseline_home_24"/>
+    <item
+        android:id="@+id/fragment_recipe"
+        android:title="레시피"
+        android:icon="@drawable/baseline_menu_book_24"/>
+    <item
+        android:id="@+id/fragment_bookmark"
+        android:title="즐겨찾기"
+        android:icon="@drawable/baseline_star_24"/>
+    <item
+        android:id="@+id/fragment_setting"
+        android:title="설정"
+        android:icon="@drawable/baseline_settings_24"/>
+</menu>
