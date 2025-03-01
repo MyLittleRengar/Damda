@@ -1,7 +1,13 @@
+import java.util.Properties
+import java.io.FileInputStream
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
 }
+
+val properties = Properties()
+properties.load(FileInputStream(rootProject.file("local.properties")))
 
 android {
     namespace = "com.project.damda"
@@ -15,6 +21,9 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String", "API_RECIPE", "${properties["api.recipe"]}")
+        buildConfigField("String", "API_RECIPE_KEY", "${properties["api.recipe_key"]}")
     }
 
     buildTypes {
@@ -35,6 +44,8 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        buildConfig = true
+        dataBinding = true
     }
 }
 
