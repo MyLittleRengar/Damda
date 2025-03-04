@@ -8,40 +8,27 @@
     app:cardCornerRadius="12dp"
     app:cardElevation="6dp">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:padding="15dp">
-
-        <ImageView
-            android:id="@+id/rvItem_recommendRecipeIv"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:clipToOutline="true"
-            tools:srcCompat="@tools:sample/avatars"
-            tools:ignore="ContentDescription,UnusedAttribute" />
+        android:layout_height="match_parent"
+        android:padding="5dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="5dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/rvItem_recommendRecipeNameTv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:ellipsize="end"
                 android:fontFamily="@font/cju_bold"
                 android:gravity="center"
+                android:maxLines="1"
                 android:text="레시피 이름"
                 android:textColor="@color/black"
-                android:maxLines="1"
-                android:ellipsize="end"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
 
             <View
                 android:id="@+id/divider"
@@ -54,6 +41,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -63,7 +51,7 @@
                     android:fontFamily="@font/cju_bold"
                     android:text="설명: "
                     android:textColor="@color/black"
-                    android:textSize="11sp"/>
+                    android:textSize="11sp" />
 
                 <TextView
                     android:id="@+id/rvItem_recommendRecipeDescriptionTv"
@@ -72,7 +60,7 @@
                     android:fontFamily="@font/cju_bold"
                     android:text=""
                     android:textColor="@color/black"
-                    android:textSize="11sp"/>
+                    android:textSize="11sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -122,10 +110,10 @@
                     android:fontFamily="@font/cju_bold"
                     android:text=""
                     android:textColor="@color/black"
-                    android:textSize="11sp"/>
+                    android:textSize="11sp" />
             </LinearLayout>
 
         </LinearLayout>
-    </LinearLayout>
+    </ScrollView>
 
 </androidx.cardview.widget.CardView>
